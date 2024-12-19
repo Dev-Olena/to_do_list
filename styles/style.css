@@ -1,3 +1,4 @@
+/*common styles*/
 :root {
   font-size: 14px;
   --main-dark-color: #20211fd5;
@@ -8,10 +9,38 @@
 * {
   box-sizing: border-box;
 }
+
+input, .btn-create {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.btn{
+  background-color: var(--orange-color);
+  border: none;
+  border-radius: 40px;
+  color: var(--main-dark-color);
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.btn-create:hover, .btn-del:hover {
+  background-color: rgba(205, 231, 225, 0.8);
+}
+
+.task-item::before, .checked::before {
+  content: ' ';
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
 body {
   background-color: var(--main-dark-color);
 }
 
+/*Main block*/
 .main-wrapper{
   padding: 2em;
   /* height: 100vh; */
@@ -28,11 +57,12 @@ body {
   flex-direction: column;
   min-height: 450px;
   width: 85%;
-  max-width: 550px;
-  min-width: 300px;
+  max-width: 700px;
+  min-width: 350px;
   gap: 1rem;
 }
 
+/*Title*/
 .title {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -40,6 +70,8 @@ body {
   font-weight: 700;
   color: var(--orange-color);
 }
+
+/* Form block */
 
 .form {
   width: 100%;
@@ -50,19 +82,14 @@ body {
   border-radius: 40px;  
 }
 
-input, .form button {
-  font-size: 1.5rem;
-  padding: 1rem 1.5rem;
-  border: none;
-  outline: none;
-}
-
 input {
   width: 75%;
+  border: none;
+  outline: none;
   background: transparent;
 }
 
-.form button {
+.btn-create {
   border-radius: 40px;
   background-color: var(--orange-color);
   color: var(--main-dark-color);
@@ -70,11 +97,8 @@ input {
   transition: 0.5s all;
 }
 
-form button:hover {
-  background-color: rgba(205, 231, 225, 0.8);
-}
-
 /*Tasks block*/
+
 .tasks-wrapper {
   padding: 2em;
   font-size: 1.2em;
@@ -84,10 +108,39 @@ form button:hover {
 }
 
 .tasks-list {
-  
+  color: var(--main-dark-color);
+  font-size: 1.3rem;
 }
 
-.checked {
+.task-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.task-item:last-child {
+  margin-bottom: 0;
+}
+
+.task-item::before {
+  background-image: url('../assets/circle_icon.png');
+}
+
+.checked span {
   text-decoration: line-through;
 }
+
+.checked::before {
+  background-image: url('../assets/chech_icon.png');
+}
+
+.btn-del {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+
   
