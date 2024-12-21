@@ -33,7 +33,7 @@ input, .btn-create {
   background-size: cover;
   width: 2rem;
   height: 2rem;
-  margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 body {
@@ -119,10 +119,16 @@ input {
   justify-content: flex-start;
   margin-bottom: 0.5rem;
   align-items: center;
+  gap: 0.5rem;
+
 }
 
 .task-item:last-child {
   margin-bottom: 0;
+}
+
+.task-text {
+  word-break: break-all;
 }
 
 .task-item::before {

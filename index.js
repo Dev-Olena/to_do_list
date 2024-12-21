@@ -4,7 +4,7 @@ const list = document.querySelector('.tasks-list');
 form.addEventListener('submit', function(event){
     event.preventDefault();
     const {task: {value:  newTask}} = event.target;
-    if(newTask && ) {
+    if(newTask) {
         createNewTask(newTask);
     }
     form.reset();
