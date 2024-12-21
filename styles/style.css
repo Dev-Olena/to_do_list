@@ -87,6 +87,7 @@ input {
   border: none;
   outline: none;
   background: transparent;
+  color: var(--main-dark-color);
 }
 
 .btn-create {
