@@ -4,6 +4,7 @@
   --main-dark-color: #20211fd5;
   --main-light-color: rgba(205, 231, 225, 0.5);
   --orange-color: rgb(199, 117, 17);
+  --tasks-font-size: 1.3rem;
 }
 
 * {
@@ -110,7 +111,7 @@ input {
 
 .tasks-list {
   color: var(--main-dark-color);
-  font-size: 1.3rem;
+  font-size: var(--tasks-font-size);
 }
 
 .task-item {
@@ -129,6 +130,12 @@ input {
 
 .task-text {
   word-break: break-all;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.task-text:hover {
+  font-size: calc(var(--tasks-font-size) + 0.5rem);
 }
 
 .task-item::before {
